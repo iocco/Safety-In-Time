@@ -95,12 +95,12 @@
         var params = new Object();
         params.value1 = "test";
         params.value2 = "param";
-
+        id=device.uuid;
         options.params = params;
         options.chunkedMode = false;
 
         var ft = new FileTransfer();
-        ft.upload(imageURI, "http://smartpreventions.com/app/upload2.php?longitud="+longitud+"&latitud="+latitud+"&tipo="+tipo+"&comentario="+comentario, win, fail, options);
+        ft.upload(imageURI, "http://smartpreventions.com/app/upload2.php?longitud="+longitud+"&latitud="+latitud+"&tipo="+tipo+"&comentario="+comentario+"&id="+id, win, fail, options);
     }
 
        function win(r) {

@@ -90,6 +90,8 @@
     }
     
   function uploadPhoto(imageURI) {
+	  var element = document.getElementById('geolocation');
+		element.innerHTML='	<H1> Enviando Reporte </H1>';
         var options = new FileUploadOptions();
 
         var params = new Object();
@@ -120,6 +122,7 @@
     function Comentario(){
     	
     	comentario = document.f1.comentario.value;
+    	comentario = comentario.replace(" ","_");
      	var element = document.getElementById('geolocation');
   		element.innerHTML='	<H1 onclick="setTipo(1);">Incendio</H1><br><H1 onclick="setTipo(2);">Accidentes</H1><br><H1 onclick="setTipo(3);">Medicas</H1><br><H1 onclick="setTipo(4);">Daños</H1>';
   		var ayuda = document.getElementById('ayuda');
